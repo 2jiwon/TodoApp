@@ -23,7 +23,7 @@ $factory->define(App\User::class, function (Faker $faker) {
     ];
 });
 
-$factory>define(App\Todo::class, function (Faker $faker) {
+$factory->define(App\Todo::class, function (Faker $faker) {
   return [
     'todo' => $faker->sentence(10)
   ];
