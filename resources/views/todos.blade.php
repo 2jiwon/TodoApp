@@ -1,6 +1,14 @@
 @extends('layout')
 
 @section('content')
+
+<div class="row justify-content-center">
+  <div class="col-lg-6 col-lg-offset-3">
+    <form action="/create/todo" method="post">
+      <input class="form-control input-lg" type="text" name="todo" placeholder="Create a new list">
+    </form>
+  </div>
+</div>
             
             @foreach ($todos as $todo)
               {{ $todo->todo }}
