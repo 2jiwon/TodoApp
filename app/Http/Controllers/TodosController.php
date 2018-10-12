@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TodosController extends Controller
 {
-    public function index () {
+    public function index() {
       $todos = Todo::all();
 
       return view('todos')->with('todos', $todos);
@@ -20,5 +20,9 @@ class TodosController extends Controller
       $todo->save();
 
       return redirect()->back();
+    }
+
+    public function delete($id) {
+      dd($id);
     }
 }
