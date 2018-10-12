@@ -36,6 +36,11 @@ class TodosController extends Controller
     }
 
     public function save(Request $request, $id) {
-      dd($request->all());
+      $todo = Todo::find($id);
+
+      $todo->todo = $request->todo;
+      $todo->save();
+
+      return redirect()->back();
     }
 }
