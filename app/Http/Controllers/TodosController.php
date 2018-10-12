@@ -34,4 +34,8 @@ class TodosController extends Controller
 
       return view('update')->with('todo', $todo);
     }
+
+    public function save(Request $request, $id) {
+      dd($request->all());
+    }
 }
