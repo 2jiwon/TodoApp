@@ -41,6 +41,6 @@ class TodosController extends Controller
       $todo->todo = $request->todo;
       $todo->save();
 
-      return redirect()->back();
+      return redirect()->route('todos');
     }
 }
