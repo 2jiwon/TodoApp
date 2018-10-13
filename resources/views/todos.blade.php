@@ -16,6 +16,8 @@
               
               @if (!$todo->completed)
                 <a href="{{ route('todo.completed', ['id' => $todo->id ]) }}" class="btn btn-sm btn-success">&check;</a>
+              @else
+                <span class="alert-success">completed</span>
               @endif
               <a href="{{ route('todo.update', ['id' => $todo->id ]) }}" class="btn btn-sm btn-primary">update</a>
               <a href="{{ route('todo.delete', ['id' => $todo->id ]) }}" class="btn btn-sm btn-danger"> X </a>
