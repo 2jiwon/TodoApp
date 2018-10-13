@@ -11,17 +11,19 @@
   </div>
 </div>
             
-            @foreach ($todos as $todo)
-              {{ $todo->todo }}
-              
-              @if (!$todo->completed)
-                <a href="{{ route('todo.completed', ['id' => $todo->id ]) }}" class="btn btn-sm btn-success">&check;</a>
-              @else
-                <span class="alert-success">completed</span>
-              @endif
-              <a href="{{ route('todo.update', ['id' => $todo->id ]) }}" class="btn btn-sm btn-primary">update</a>
-              <a href="{{ route('todo.delete', ['id' => $todo->id ]) }}" class="btn btn-sm btn-danger"> X </a>
-              <hr>
-            @endforeach
+<div class="pt-5"></div>
+
+  @foreach ($todos as $todo)
+    {{ $todo->todo }}
+    
+    @if (!$todo->completed)
+      <a href="{{ route('todo.completed', ['id' => $todo->id ]) }}" class="btn btn-sm btn-success">&check;</a>
+    @else
+      <span class="alert-success">completed</span>
+    @endif
+    <a href="{{ route('todo.update', ['id' => $todo->id ]) }}" class="btn btn-sm btn-primary">update</a>
+    <a href="{{ route('todo.delete', ['id' => $todo->id ]) }}" class="btn btn-sm btn-danger"> X </a>
+    <hr>
+  @endforeach
 
 @stop
